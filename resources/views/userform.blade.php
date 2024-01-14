@@ -29,5 +29,9 @@
     <?= Form::select('color', array('red' => 'red', 'green' => 'green', 'blue' => 'blue')) ?>
     <br>
 
+    <span>{!! captcha_img() !!}</span><br>
+    <?= Form::text('captcha') ?>
+    <br>
+
 <?= Form::submit('Send it!') ?>
 <?= Form::close() ?>

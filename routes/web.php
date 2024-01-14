@@ -29,6 +29,7 @@ Route::post('/userform', function (Request $request) {
         'email' => 'required|email|different:username',
         'username' => 'required|min:6',
         'password' => 'required|same:password_confirm',
+        'captcha' => 'required'
     ], [
         'username.required' => 'We really, really need a Username.',
     ]);
