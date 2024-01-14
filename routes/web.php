@@ -29,9 +29,10 @@ Route::post('/userform', function (Request $request) {
         'email' => 'required|email|different:username',
         'username' => 'required|min:6',
         'password' => 'required|same:password_confirm',
-        'captcha' => 'required'
+        'captcha' => 'required|captcha'
     ], [
         'username.required' => 'We really, really need a Username.',
+        'captcha.captcha' => 'Captcha wrong. Use your eyes dumbass.'
     ]);
 
     if ($validation->fails()) {
